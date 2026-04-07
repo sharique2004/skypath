@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #000000;
+  --bg-dark: #ffffff;
   --bg-card: #000000;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -38,7 +38,7 @@ body {
 .header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #25b3eb, #25b3eb);
+  background: linear-gradient(135deg, #000000, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
@@ -116,4 +116,125 @@ body {
 .search-button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+/* Results Styles */
+.results-container h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+}
+
+.itinerary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.itinerary-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.itinerary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.itinerary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+}
+
+.duration strong {
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4ade80;
+  /* A nice vibrant green */
+}
+
+.segments-list {
+  padding: 1.5rem;
+}
+
+.segment {
+  margin-bottom: 1rem;
+}
+
+.segment-airline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.segment-route {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.route-point {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-point .time {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.route-point .airport {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.route-line {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  position: relative;
+}
+
+.route-line::after {
+  content: '✈';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--accent-blue);
+  background-color: var(--bg-card);
+  padding: 0 10px;
+}
+
+.layover-box {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px dashed rgba(245, 158, 11, 0.3);
 }
