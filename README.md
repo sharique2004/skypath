@@ -4,6 +4,9 @@ A Full-Stack project that finds all the direct and multi-stop flight itineraries
 
 ## How to Run
 
+**Interface**
+The application only takes the name of the airport code as input and not the name of the place for example JFK not New York. The same applies to the destination.
+
 **Requirements:** Docker and Docker Compose must be installed.
 
 ```bash
