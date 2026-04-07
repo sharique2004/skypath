@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import SearchForm from './components/SearchForm';
 import FlightResults from './components/FlightResults';
-import './App.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
